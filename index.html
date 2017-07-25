@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #678297;
+            color: #D1D2D2;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8em;
+            padding: 1em;
+        }
+
+        .pagewidth {
+            display: grid;
+            grid-template-areas: "header header" "postheader postheader" "main aside" "postmain aside" "postmain prefooter" "footer footer";
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: .1fr .1fr 3fr .1fr 1fr .1fr;
+            grid-gap: 1em;
+            max-width: 1000px;
+            margin: 1em auto;
+        }
+
+        header,
+        .post-header,
+        main,
+        .post-main,
+        aside,
+        .pre-footer,
+        footer {
+            background-color: #000F1B;
+            padding: 2em;
+            border: 10px solid #052944;
+            box-shadow: .1em .1em .1em .1em rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        .post-header {
+            grid-area: postheader;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        .post-main {
+            grid-area: postmain;
+            
+            align-self: stretch;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        .pre-footer {
+            grid-area: prefooter;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        @media (max-width: 800px) {
+            .pagewidth {
+                grid-template-areas: "header" "postheader" "main" "aside" "postmain" "prefooter" "footer";
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .pagewidth {
+                grid-template-areas: "header header header" "postheader postheader aside" "main main aside" "main main aside" "postmain postmain aside" "prefooter prefooter prefooter" "footer footer footer";
+                grid-template-columns: 2fr 1fr 2fr;
+                grid-template-rows: 1fr .5fr 1.5fr 1fr 1fr .5fr 1.5fr;
+                max-width: 1200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pagewidth">
+        <header>
+            <h1>Header</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+        </header>
+        <div class="post-header">
+            <h2>Post header</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+        </div>
+        <main>
+            <h1>Main</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+        </main>
+        <div class="post-main">
+            <h1>Post main</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+        </div>
+        <aside>
+            <h1>Aside</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+        </aside>
+        <div class="pre-footer">
+            <h2>Pre Footer</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+        </div>
+        <footer>
+            <h1>Footer</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos ipsum accusantium totam eligendi nisi, ex,
+                tenetur voluptatum error expedita sunt tempore. Fugit distinctio sed dolorem eaque delectus odit enim!</p>
+        </footer>
+    </div>
+</body>
+
+</html>
